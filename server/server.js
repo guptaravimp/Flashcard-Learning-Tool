@@ -5,7 +5,10 @@ const cors = require('cors');
 const app = express();
 const port = 5000;
 
-app.use(cors());
+app.use(cors({
+  origin: 'https://vercel.com/ravi-guptas-projects-983a0fa4/flashcard-learning-tool-api/D8MDD39N1r2vpqXXinudEKZUk9wq', 
+  methods: 'GET,POST,PUT,DELETE',
+}));
 app.use(express.json());
 
 const pool = mysql.createPool({
